@@ -83,6 +83,10 @@ h2 {
     border-radius: 15px;
 }
 
+.firstBtn {
+    margin-top: 1.5rem;
+}
+
 .introBox {
     width: 70%;
     margin: 5%;
@@ -110,10 +114,11 @@ h2 {
     background-color: white;
     box-shadow: var(--shadow);
     padding: 10px 30px;
+    text-decoration: none;
     color: black;
-    border-radius: 20px;
+    border-radius: 5rem;
     border: 1px solid RGB(126, 34, 206);
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .secondaryBtn:hover {
@@ -121,9 +126,9 @@ h2 {
     padding: 10px 30px;
     box-shadow: var(--shadow);
     color: white;
-    border-radius: 20px;
+    border-radius: 5rem;
     border: 1px solid RGB(126, 34, 206);
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 
