@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #fff;
 }
 
 
@@ -25,6 +26,7 @@ h2 {
     box-shadow: var(--shadow);
     width: auto;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .leftNav {
@@ -35,7 +37,7 @@ h2 {
 
 .rightNav {
     display: flex;
-    flex-direction: row;
+    flex-direction: flex-end;
     justify-content: flex-end;
     align-items: center;
     width: 50%;
@@ -78,6 +80,7 @@ h2 {
 .firstBox {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     margin-top: 5%;
     border-radius: 15px;
@@ -88,12 +91,13 @@ h2 {
 }
 
 .introBox {
-    width: 70%;
-    margin: 5%;
+    width: 60%;
+    margin: 3%;
 }
 
 .imageBox {
-    width: 30%;
+    width: 29%;
+    margin-right: 3%;
 }
 
 .introBox h1 span {
@@ -153,6 +157,7 @@ h2 {
 .resume-img {
     width: 50%;
     margin-left: 12%;
+    margin-top: 5%;
 }
 
 .resume-img img {
@@ -164,11 +169,9 @@ h2 {
 
 .educationDetail {
     width: 50%;
-    /* border: 2px solid black; */
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .educationDetail h1 {
@@ -180,8 +183,6 @@ h2 {
     flex-direction: column;
     margin-bottom: 1rem;
     padding-bottom: 0rem;
-    justify-content: center;
-    align-items: center;
     border-bottom: 5px solid RGB(126, 34, 206);
 }
 
@@ -192,6 +193,8 @@ h2 {
 
 .resumeList {
     list-style-type: none;
+    display: flex;
+    justify-content: space-between;
     padding: 3px;
 }
 
@@ -249,9 +252,9 @@ h2 {
 
 .skill:hover {
     width: 25%;
-    background-color: RGB(126, 34, 206);
+    background-color: rgb(237, 237, 237);
     height: 10rem;
-    color: white;
+    color: black;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -262,7 +265,6 @@ h2 {
     margin: .5rem;
     border-radius: .8rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 
