@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="typing.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/a6f1afbba4.js" crossorigin="anonymous"></script>
@@ -15,28 +16,29 @@
 </head>
 
 <body>
-    <div class="nav">
-        <div class="leftNav">
-            <li class="list">Home</li>
-            <li class="list">About me</li>
-            <li class="list">Contact me</li>
-            <li class="list">Services</li>
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-
-        <div class="rightNav">
-            <a href="https://github.com/theasifimam/" class="btnPrimary"><i class="fa fa-github"
-                    aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/theasifimam/" class="btnPrimary"><i class="fa fa-linkedin-square"
-                    aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/aasif.imaam" class="btnPrimary"><i class="fa fa-instagram"
-                    aria-hidden="true"></i></a>
-            <a href="https://wa.me/919911471995" class="btnPrimary"><i class="fa fa-whatsapp"
-                    aria-hidden="true"></i></a>
-        </div>
-
-        <button class="toggle"><i class="fa-solid fa-bars"></i></button>
-
-    </div>
+        <ul class="nav-links">
+            <li><a href="">Home</a></li>
+            <li><a href="">Resume</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Contact</a></li>
+            <li>
+                <a href="https://github.com/theasifimam/" class="btnPrimary"><i class="fa fa-github"
+                        aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/theasifimam/" class="btnPrimary"><i class="fa fa-linkedin-square"
+                        aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/aasif.imaam" class="btnPrimary"><i class="fa fa-instagram"
+                        aria-hidden="true"></i></a>
+                <a href="https://wa.me/919911471995" class="btnPrimary"><i class="fa fa-whatsapp"
+                        aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </nav>
 
     <div class="Container">
 
@@ -44,7 +46,11 @@
         <div class="firstBox">
 
             <div class="introBox">
-                <h1>I'm <span class="animation"> <br> Asif Imam, <br> MERN Stack Developer</span></h1>
+                <!-- <h1>I'm <span class="animation"> <br> Asif Imam, <br> MERN Stack Developer</span></h1> -->
+
+                <div class="container2">
+                    <p>I'm <br><span class="typed-text animation"></span><span class="cursor">&nbsp;</span></p>
+                </div>
                 <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, blanditiis quisquam
                     exercitationem ea aliquam consequatur a nulla nam quaerat vero?Lorem ipsum, dolor sit amet
                     consectetur adipisicing elit. Impedit, omnis.</p>
@@ -63,7 +69,7 @@
 
 
 
-        <div class="secondBox">
+        <div class="secondBox" id="aboutMe">
             <div class="resume-img">
                 <img src="img/about.jpg" alt="photo of asif">
             </div>
@@ -96,7 +102,7 @@
             </div>
         </div>
 
-        <div class="skillContainer">
+        <div class="skillContainer" id="skills">
             <div class="skillHeading">
                 <h1>Skills I have!</h1>
             </div>
@@ -105,71 +111,61 @@
                 <div class="skill">
                     <img src="img/js.png" alt="JavaSript Icon">
                     <h3>JavaScript</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam similique qui consequatur nemo!
-                    </p>
+
                 </div>
 
                 <div class="skill">
                     <img src="img/rjs.png" alt="JavaSript Icon">
                     <h3>ReactJS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam similique qui consequatur nemo!
-                    </p>
+
                 </div>
 
                 <div class="skill">
                     <img src="img/nodejs.png" alt="JavaSript Icon">
                     <h3>NodeJS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam similique qui consequatur nemo!
-                    </p>
+
                 </div>
 
                 <div class="skill">
                     <img src="img/mongodb.png" alt="JavaSript Icon">
                     <h3>MongoDB</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam similique qui consequatur nemo!
-                    </p>
+
                 </div>
 
                 <div class="skill">
                     <img src="img/express.png" alt="JavaSript Icon">
                     <h3>ExpressJS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam similique qui consequatur nemo!
-                    </p>
+
                 </div>
 
                 <div class="skill">
                     <img src="img/linux.jpg" alt="JavaSript Icon">
                     <h3>Ubuntu</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam similique qui consequatur nemo!
-                    </p>
+
                 </div>
 
                 <div class="skill">
                     <img src="img/html.png" alt="JavaSript Icon">
                     <h3>HTML</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam similique qui consequatur nemo!
-                    </p>
+
                 </div>
 
                 <div class="skill">
                     <img src="img/css.png" alt="JavaSript Icon">
                     <h3>CSS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam similique qui consequatur nemo!
-                    </p>
+
                 </div>
 
                 <div class="skill">
                     <img src="img/git.png" alt="JavaSript Icon">
                     <h3>Git</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam similique qui consequatur nemo!
-                    </p>
+
                 </div>
 
                 <div class="skill">
                     <img src="img/php.png" alt="JavaSript Icon">
                     <h3>PHP</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam similique qui consequatur nemo!
-                    </p>
+
                 </div>
 
 
@@ -177,7 +173,7 @@
         </div>
 
 
-        <div class="projects">
+        <div class="projects" id="projects">
             <h1>
                 My
                 Projects</h1>
@@ -219,6 +215,7 @@
         </p>
     </div>
 
+    <script src="main.js"></script>
 </body>
 
 </html>

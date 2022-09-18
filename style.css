@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,900;1,500;1,600;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0px;
     padding: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Jost', sans-serif;
     background-color: #fff;
 }
 
@@ -20,75 +24,46 @@ h2 {
     margin-top: 2%;
 }
 
-/* --------------------------------------------NAV NAV NAV NAV NAV----------------------------------------------- */
+/* --------------------------------------------
 
-.nav {
+
+
+
+
+NAV NAV NAV NAV NAV----------------------------------------------- */
+
+.nav-links {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-shadow: var(--shadow);
-    width: auto;
-    flex-wrap: wrap;
-    width: 100%;
+    height: 10vh;
     align-items: center;
+    justify-content: flex-start;
 }
 
-.leftNav {
-    display: flex;
-    flex-direction: row;
+.nav-links li {
+    list-style-type: none;
+    padding-left: 3rem;
 }
 
-.leftNav li {
-    font-size: 15px;
-}
-
-.leftNav li:hover {
-    color: #fff;
-    background-color: RGB(126, 34, 206);
-    border-radius: 10px;
-}
-
-
-.rightNav {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.rightNav a i {
-    font-size: 20px;
-    padding: 10px;
-}
-
-.rightNav a i:hover {
-    color: #fff;
-    background-color: RGB(126, 34, 206);
-    border-radius: 50%;
-}
-
-
-.btnPrimary {
-    background-color: white;
-    padding: 5px 10px;
+.nav-links li a {
     color: black;
-    font-size: 1.5rem;
-    border: 0px solid white;
+    font-weight: 500;
+    text-decoration: none;
 }
 
-.btnPrimary:hover {
-    cursor: pointer;
-    color: black;
+.nav-links li a:hover {
+    color: rgb(181, 181, 181);
 }
 
-.list {
-    list-style: none;
-    padding: 20px;
-    color: RGB(126, 34, 206);
-    font-weight: 300;
+.nav-links li:nth-of-type(5) {
+    position: absolute;
+    right: 15px;
+    top: 15px;
 }
 
-.toggle {
-    display: none;
+.nav-links li:nth-of-type(5) a {
+
+    margin-left: 1rem;
+    justify-content: flex-end;
 }
 
 /* -----------------------------------------------First Section First First First ----------------------------------------- */
@@ -133,10 +108,10 @@ h2 {
 }
 
 .introBox h1 span {
-    font-weight: 700;
-    font-size: 4rem;
+    font-weight: 900;
+    font-size: 3rem;
     line-height: 30%;
-    letter-spacing: -0.3rem;
+    letter-spacing: -0.1rem;
     color: RGB(126, 34, 206);
 
 }
@@ -261,36 +236,30 @@ h2 {
 }
 
 .skill {
-    width: 25%;
-    height: 10rem;
+    width: 15%;
+    height: 7rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: .5rem;
     box-shadow: var(--shadow);
     margin: .5rem;
     border-radius: .8rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
 .skill:hover {
-    width: 25%;
     background-color: rgb(237, 237, 237);
-    height: 10rem;
     color: black;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
     box-shadow: var(--shadow);
-    margin: .5rem;
-    border-radius: .8rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: RGB(126, 34, 206);
 }
 
 
@@ -301,15 +270,13 @@ h2 {
 }
 
 .skill h3 {
-    color: RGB(126, 34, 206);
+    /* color: RGB(126, 34, 206); */
+    color: black;
     margin-bottom: .7rem;
-    /* border-bottom: 2px solid RGB(126, 34, 206); */
+    font-weight: 400;
 }
 
-.skill p {
-    font-size: .8rem;
-    line-height: .7rem;
-}
+
 
 .projects {
     display: flex;
@@ -352,6 +319,8 @@ h2 {
     margin: 1rem;
 }
 
+
+
 .projectInfo img {
     box-shadow: var(--shadow);
     margin-top: 20px;
@@ -378,16 +347,51 @@ h2 {
 }
 
 @media screen and (max-width:850px) {
-    .toggle {
-        display: block;
-        position: absolute;
-        right: 0;
-        margin: 50px;
+    .line {
+        width: 30px;
+        height: 3px;
+        background: black;
+        margin: 5px;
     }
 
-    .nav {
-        flex-direction: column;
+    nav {
+        position: relative;
+        height: 10vh;
     }
+
+    .hamburger {
+        position: fixed;
+        cursor: pointer;
+        right: 5%;
+        top: 5%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    .nav-links {
+        position: relative;
+        background: RGB(126, 34, 206);
+        height: 70vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -30%);
+        -webkit-clip-path: circle(100px at 90% -30%);
+        transition: all 1s ease-out;
+    }
+
+
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+    }
+
+    .nav-links li:nth-of-type(5) {
+        position: relative;
+    }
+
 
     .firstBox {
         flex-direction: column-reverse;
@@ -437,11 +441,13 @@ h2 {
     }
 
     .skill {
-        width: 80%;
+        width: 25%;
     }
 
     .myProjects .projectInfo {
         width: 80%;
     }
+
+
 
 }
