@@ -5,6 +5,7 @@
     padding: 0px;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -16,7 +17,7 @@ body {
 
 
 :root {
-    --shadow: 0px 0px 15px -9px;
+    --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 h1,
@@ -50,19 +51,42 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
     text-decoration: none;
 }
 
+.nav-links li:nth-of-type(1) a {
+    font-weight: 900;
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    color: RGB(126, 34, 206);
+    -webkit-text-stroke: 1px RGB(126, 34, 206);
+}
+
+.nav-links li:nth-of-type(1) a span {
+    font-weight: 900;
+    font-family: 'Jost', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    -webkit-text-stroke: 1px RGB(126, 34, 206);
+    text-transform: uppercase;
+
+}
+
+.nav-links li:nth-of-type(1) a span:nth-of-type(2) {
+    letter-spacing: -12px;
+    margin-left: -16px;
+}
+
 .nav-links li a:hover {
     color: rgb(181, 181, 181);
 }
 
-.nav-links li:nth-of-type(5) {
+.nav-links li:nth-of-type(6) {
     position: absolute;
     right: 15px;
     top: 15px;
 }
 
-.nav-links li:nth-of-type(5) a {
-
-    margin-left: 1rem;
+.nav-links li:nth-of-type(6) a {
+    font-size: 25px;
+    margin-left: 1.5rem;
     justify-content: flex-end;
 }
 
@@ -81,6 +105,12 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(to right, #ffffff 0%, RGB(126, 34, 206) 100%);
+}
+
+.para {
+    font-weight: 300;
 }
 
 .firstBtn {
@@ -96,35 +126,32 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
 }
 
 .introBox {
-    padding-left: 50px;
+    margin-top: 10rem;
+    padding-left: 5rem;
     justify-content: center;
-    padding-top: 7%;
 }
 
 .imageBox {
-    height: 100%;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    position: relative;
+    bottom: -2rem;
+    right: 0;
 }
 
-.introBox h1 span {
-    font-weight: 900;
-    font-size: 3rem;
-    line-height: 30%;
-    letter-spacing: -0.1rem;
-    color: RGB(126, 34, 206);
-
+.btnPrimary {
+    background-color: RGB(126, 34, 206);
+    box-shadow: var(--shadow);
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 5rem;
+    border: 1px solid RGB(126, 34, 206);
 }
 
-.intro p {
-    line-height: 90%;
-    margin-top: 20px;
-}
 
 .secondaryBtn {
     background-color: white;
     box-shadow: var(--shadow);
-    padding: 10px 30px;
+    padding: 0.5rem 2rem;
     text-decoration: none;
     color: black;
     border-radius: 5rem;
@@ -133,29 +160,27 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
 
 .secondaryBtn:hover {
     background-color: RGB(126, 34, 206);
-    padding: 10px 30px;
     box-shadow: var(--shadow);
     color: white;
-    border-radius: 5rem;
     border: 1px solid RGB(126, 34, 206);
 }
+
+
+
+/* --------------Resume Resume Resume-------------- */
 
 .secondBox {
     padding: 3%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border-radius: 15px;
 }
 
-/* -----------------------------------Resume Resume Resume Resume Resume------------------------------------------ */
-
-
 .resume-img {
-    width: 50%;
-    margin-left: 12%;
     margin-top: 5%;
+
 }
 
 .resume-img img {
@@ -165,8 +190,11 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
 
 }
 
+.resume-img img:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
 .educationDetail {
-    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -210,7 +238,7 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
 }
 
 
-/* ----------------------------------------Skill Skill Skill Skill Skill------------------------------------ */
+/* -----------Skill Skill Skill------------- */
 
 .skillHeading h1 {
     color: RGB(126, 34, 206);
@@ -232,18 +260,17 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 90%;
 }
 
 .skill {
-    width: 15%;
-    height: 7rem;
+    width: 20%;
+    height: 8.5rem;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    font-size: 12px;
+    text-align: left;
     justify-content: center;
-    align-items: center;
-    padding: .5rem;
+    padding: 0.5rem 2.5rem;
     box-shadow: var(--shadow);
     margin: .5rem;
     border-radius: .8rem;
@@ -253,30 +280,25 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
 .skill:hover {
     background-color: rgb(237, 237, 237);
     color: black;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--shadow);
-    background: RGB(126, 34, 206);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 
 
 .skill img {
     width: 15%;
-    margin-bottom: .5rem;
+    margin-bottom: .3rem;
 }
 
 .skill h3 {
     /* color: RGB(126, 34, 206); */
     color: black;
     margin-bottom: .7rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 
+/* -----------Projects Section ---------------- */
 
 .projects {
     display: flex;
@@ -296,14 +318,36 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
     /* width: 30%; */
 }
 
+.projectInfo {
+    width: 25%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.projectInfo:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
 .projectInfo h3 {
     display: flex;
+    color: black;
     flex-direction: column;
-    padding: 15px;
+    padding: 0 15px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 0px;
-    border-bottom: 5px solid RGB(126, 34, 206);
+}
+
+.projectInfo h4 {
+    padding: 1rem 0;
+    color: black;
+    font-weight: 700;
+}
+
+.projectInfo p {
+    font-weight: 300;
+    font-size: 0.8rem;
 }
 
 .myProjects {
@@ -314,15 +358,9 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
     margin: 0 9%;
 }
 
-.projectInfo {
-    width: 25%;
-    margin: 1rem;
-}
-
 
 
 .projectInfo img {
-    box-shadow: var(--shadow);
     margin-top: 20px;
     width: 100%;
 }
@@ -388,7 +426,19 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
         -webkit-clip-path: circle(1000px at 90% -10%);
     }
 
-    .nav-links li:nth-of-type(5) {
+    .nav-links li a {
+        color: white;
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+    .nav-links li:nth-of-type(1) {
+        border: 1px solid white;
+        padding: 0rem 2rem;
+        display: none;
+    }
+
+    .nav-links li:nth-of-type(6) {
         position: relative;
     }
 
@@ -397,8 +447,14 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
         flex-direction: column-reverse;
     }
 
-    .firstBox .imageBox img {
-        width: 100%;
+    .firstBox .imageBox {
+        display: none;
+    }
+
+    .introBox {
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .secondBox {

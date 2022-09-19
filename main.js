@@ -12,8 +12,8 @@ const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
 const textArray = [
-  "Asif Imam",
-  "Web Developer",
+  "Asif Imam 🙂",
+  "Web Developer 💻",
   "UI/UX Designer",
   "App Developer",
 ];
