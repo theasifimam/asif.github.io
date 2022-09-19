@@ -3,6 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 
@@ -90,7 +91,7 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
     justify-content: flex-end;
 }
 
-/* -----------------------------------------------First Section First First First ----------------------------------------- */
+/* -------------------First Section First -------------- */
 
 .Container {
     display: flex;
@@ -133,7 +134,7 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
 
 .imageBox {
     position: relative;
-    bottom: -2rem;
+    bottom: -20px;
     right: 0;
 }
 
@@ -264,7 +265,7 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
 
 .skill {
     width: 20%;
-    height: 8.5rem;
+    height: 10.5rem;
     display: flex;
     flex-direction: column;
     font-size: 12px;
@@ -497,7 +498,7 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
     }
 
     .skill {
-        width: 25%;
+        width: 65%;
     }
 
     .myProjects .projectInfo {
@@ -506,4 +507,16 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
 
 
 
+}
+
+@media screen and (min-width:1500px) {
+    .firstBox {
+        height: 45vh;
+    }
+
+    .imageBox {
+        position: relative;
+        bottom: -20px;
+        right: 0;
+    }
 }
