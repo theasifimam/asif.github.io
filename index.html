@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/a6f1afbba4.js" crossorigin="anonymous"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Asif Imam</title>
 </head>
 
@@ -58,11 +60,16 @@
 
                 <div class="firstBtn">
                     <button class="btnPrimary">
-                        <a href="https://drive.google.com/file/d/1a-5Sm7K8SIelU60t12qErj8-uU-NYPDP/view"
-                            class="btnPrimary">Download Resume</a>
+                        <a href="https://drive.google.com/file/d/1a-5Sm7K8SIelU60t12qErj8-uU-NYPDP/view">
+
+                            Download
+                            Resume
+                        </a>
                     </button>
 
-                    <button class="secondaryBtn"><a href="https://www.github.com/theasifimam">GitHub</a></button>
+                    <button class="secondaryBtn">
+                        <a href="https://www.github.com/theasifimam">GitHub</a>
+                    </button>
                 </div>
             </div>
 
@@ -74,10 +81,10 @@
         <div class="secondBox" id="resume">
             <h1 class="primaryHeading">My Education 👨‍🎓</h2>
                 <div class="resumeContainer">
-                    <img src="img/about.jpg" alt="photo of asif">
+                    <img data-aos="fade-right" src="img/about.jpg" alt="photo of asif">
 
 
-                    <div class="detail">
+                    <div class="detail" data-aos="fade-left">
                         <div class="resumeList"><span>Name</span>
                             <p> Asif Imam</p>
                         </div>
@@ -87,7 +94,7 @@
                         </div>
 
                         <div class="resumeList"><span>Phone</span>
-                            <p>+919911471995</p>
+                            <p>+91 991 147 1995</p>
                         </div>
 
                         <div class="resumeList"><span>Address</span>
@@ -116,7 +123,7 @@
             </div>
 
             <div class="skillDiv">
-                <div class="skill box">
+                <div data-aos="fade-up" class="skill box">
                     <img src="img/js.png" alt="JavaSript Icon">
                     <h3>JavaScript</h3>
                     <p>Working in JavaScript since two years in different projects. I believe I have intermediate
@@ -128,7 +135,7 @@
 
                 </div>
 
-                <div class="skill box">
+                <div data-aos="fade-up" class="skill box">
                     <img src="img/rjs.png" alt="reactjs Icon">
                     <h3>ReactJS</h3>
                     <p>ReactJS is one of my favourite library to work on So Whenever I think of website I think in
@@ -139,7 +146,7 @@
 
                 </div>
 
-                <div class="skill box">
+                <div data-aos="fade-up" class="skill box">
                     <img src="img/nodejs.png" alt="nodejs Icon">
                     <h3>NodeJS</h3>
                     <p>NodeJS is Something that I work on almost every week.</p>
@@ -148,7 +155,7 @@
                     </div>
                 </div>
 
-                <div class="skill box">
+                <div data-aos="fade-up" class="skill box">
                     <img src="img/html.png" alt="html Icon">
                     <h3>HTML</h3>
                     <p>This is something that motivated me itially to do more. 2 years since I started to code in
@@ -159,7 +166,7 @@
                     </div>
                 </div>
 
-                <div class="skill box">
+                <div data-aos="fade-up" class="skill box">
                     <img src="img/css.png" alt="css Icon">
                     <h3>CSS</h3>
                     <p>Love the possibilities CSS provides me to style my website. I am minimal design lover still
@@ -170,7 +177,7 @@
                     </div>
                 </div>
 
-                <div class="skill box">
+                <div data-aos="fade-up" class="skill box">
                     <img src="img/mongodb.png" alt="mongodb Icon">
                     <h3>MongoDB</h3>
                     <p>MongoDB is the database I can't imagine my life without. Working with this DB since a year.
@@ -217,7 +224,7 @@
 
             <div class="myProjects">
 
-                <div class="projectInfo">
+                <div data-aos="zoom-in-up" class="projectInfo">
                     <h3>Social Media Site</h3>
                     <img src="img/project1.png" alt="project image">
                     <h4>A MERN Stack Social Site</h4>
@@ -227,7 +234,7 @@
                         more. The code of this project is available on my github profile.</p>
                 </div>
 
-                <div class="projectInfo">
+                <div data-aos="zoom-in-up" class="projectInfo">
                     <h3>Online Academy</h3>
                     <img src="img/project2.png" alt="project image">
                     <h4>An Online Education Site in ReactJS</h4>
@@ -236,7 +243,7 @@
                         website comes with modern beautiful UI. The code on Github.</p>
                 </div>
 
-                <div class="projectInfo">
+                <div data-aos="zoom-in-up" class="projectInfo">
                     <h3>News Website</h3>
                     <img src="img/project3.png" alt="project image">
                     <h4>News Site in PHP and MySQL</h4>
@@ -262,7 +269,8 @@
                 <img src="img/mongodb.png" alt="MongoDB Logo">
                 <img src="img/php.png" alt="PHP Logo">
                 <img src="img/linux.png" alt="Linux Logo">
-                <img src="img/git.png" alt="Git Logo"><img src="img/bootstrap.png" alt="Bootstrap Logo">
+                <img src="img/git.png" alt="Git Logo">
+                <img src="img/bootstrap.png" alt="Bootstrap Logo">
             </div>
         </div>
 
@@ -271,14 +279,15 @@
 
             <h1 class="primaryHeading">Contact Me 👋 </h1>
             <div class="contactContainer">
-
-                <div class="phone contactBox">
+                <div data-aos="zoom-in-down" data-aos-offset="200" class="phone contactBox">
                     <i class="fa-solid fa-phone"></i>
                     <h4>Phone</h4>
-                    <p>+91 991 147 1995</p>
+                    <a href="tel:991-147-1995">
+                        <p>991-147-1995</p>
+                    </a>
                 </div>
 
-                <div class="linkedin contactBox">
+                <div data-aos="zoom-in-down" data-aos-offset="200" class="linkedin contactBox">
                     <a href="https://linkedin.com/in/theasifimam" target="_blank"><i
                             class="fa-brands fa-linkedin"></i></a>
                     <a href="https://linkedin.com/in/theasifimam" target="_blank">
@@ -287,7 +296,7 @@
                     <p>Asif Imam</p>
                 </div>
 
-                <div class="email contactBox">
+                <div data-aos="zoom-in-down" data-aos-offset="200" class="email contactBox">
                     <a href="mailto: asifimam999@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
                     <a href="mailto: asifimam999@gmail.com" target="_blank">
                         <h4>Email</h4>
@@ -296,7 +305,7 @@
                     <p>asifimam999@gmail.com</p>
                 </div>
 
-                <div class="whatsapp contactBox">
+                <div data-aos="zoom-in-down" data-aos-offset="200" class="whatsapp contactBox">
                     <a href="https://wa.me/919911471995" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
@@ -320,6 +329,31 @@
     </div>
 
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 250, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1000, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+        });
+    </script>
 </body>
 
 </html>

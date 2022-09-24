@@ -14,6 +14,7 @@ html {
 body {
     font-family: 'Jost', sans-serif;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 a {
@@ -30,6 +31,7 @@ a {
 }
 
 .primaryHeading {
+    font-size: 3rem;
     padding: 0 3rem;
     display: flex;
     flex-direction: column;
@@ -37,20 +39,21 @@ a {
     align-items: center;
     border-bottom: 5px solid rgb(207, 153, 255);
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 h1,
 h2 {
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 .btnPrimary {
     background-color: rgb(126, 34, 206);
     box-shadow: var(--shadow);
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
     text-decoration: none;
     color: white;
-    border-radius: 15px;
+    border-radius: 5rem;
     border: none;
     margin: 0 1rem;
 }
@@ -59,10 +62,14 @@ h2 {
     background-color: rgb(89, 0, 168);
 }
 
+.btnPrimary a {
+    color: white;
+}
+
 .secondaryBtn {
     background-color: white;
     box-shadow: var(--shadow);
-    padding: 0.5rem 2rem;
+    padding: 0.7rem 2rem;
     text-decoration: none;
     color: black;
     border-radius: 5rem;
@@ -87,13 +94,11 @@ h2 {
     border-radius: .8rem;
 }
 
-/* --------------------------------------------
-
-
-
-
-
-NAV NAV NAV NAV NAV----------------------------------------------- */
+/* ------------ NAV NAV NAV NAV NAV ------------ */
+nav {
+    display: flex;
+    align-items: center;
+}
 
 .nav-links {
     display: flex;
@@ -168,7 +173,7 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
     justify-content: space-between;
     width: 100%;
     height: 75%;
-    background-image: linear-gradient(to right, #ffffff 0%, RGB(126, 34, 206) 100%);
+    background: linear-gradient(to right, #ffffff 0%, RGB(126, 34, 206) 100%);
 }
 
 p {
@@ -470,7 +475,7 @@ img {
 
 }
 
-.techUsed .techContainer img {
+.techUsed>.techContainer img {
     width: 50px;
     margin: 1.5rem 1.5rem;
 }
@@ -513,9 +518,12 @@ img {
     text-decoration: none;
 }
 
+.contactBox p {
+    color: grey;
+}
+
 .contactBox:hover {
     box-shadow: var(--hoverShadow);
-
     background: var(--hoverbg);
 }
 
@@ -536,6 +544,24 @@ img {
 }
 
 @media screen and (max-width:850px) {
+    /* .btnPrimary {
+        padding: 0;
+    }
+
+    .secondaryBtn {
+        margin: 1rem;
+        padding: 1rem 1rem;
+    } */
+
+    .primaryHeading {
+        font-size: 1.2rem;
+    }
+
+
+    nav h1:nth-of-type(1) {
+        display: block;
+    }
+
     .line {
         width: 30px;
         height: 3px;
@@ -598,18 +624,17 @@ img {
     }
 
 
-    /* .firstBox {
+    .firstBox {
         flex-direction: column-reverse;
-    } */
+        width: 100%;
+    }
 
     .firstBox img {
         display: none;
     }
 
     .introBox {
-        padding-bottom: 2rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding: 0 2rem 2rem 2rem;
     }
 
     .container2 p:nth-of-type(2) {
@@ -620,16 +645,6 @@ img {
     .container2 span {
         font-size: 0.7rem;
     }
-
-
-    .btnPrimary {
-        margin: 1rem 0.2rem;
-    }
-
-    .secondaryBtn {
-        margin: 1rem 0.2rem;
-    }
-
 
     .secondBox {
         flex-direction: column;
@@ -664,19 +679,10 @@ img {
         align-items: center;
     }
 
-    .detail h1 {
-        padding: 0 2rem;
-        font-size: 2rem;
-    }
-
     .skillContainer {
         width: 100%;
         justify-content: center;
         align-items: center;
-    }
-
-    .skillHeading h1 {
-        font-size: 2rem;
     }
 
     .skillDiv {
@@ -690,12 +696,9 @@ img {
     }
 
     .myProjects .projectInfo {
-        width: 85%;
+        width: 90%;
     }
 
-    .techUsed h1 {
-        font-size: 1.5rem;
-    }
 
     .contactContainer {
         flex-direction: row;
@@ -709,15 +712,16 @@ img {
 
 }
 
-
 @media screen and (max-width:550px) {
     .contactBox {
         width: 90%;
     }
 
+    .resumeList span,
+    .resumeList p {
+        font-size: 1rem;
+    }
 }
 
 /* @media screen and (min-width:1500px) {\
-
-    
 } */
