@@ -16,14 +16,75 @@ body {
     background-color: #fff;
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
 :root {
     --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --accent: RGB(126, 34, 206);
+    --hoverbg: rgb(227, 195, 255);
+    --hoverShadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.primaryHeading {
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid rgb(207, 153, 255);
+    margin-bottom: 1.5rem;
 }
 
 h1,
 h2 {
     margin-top: 2%;
+}
+
+.btnPrimary {
+    background-color: rgb(126, 34, 206);
+    box-shadow: var(--shadow);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    margin: 0 1rem;
+}
+
+.btnPrimary:hover {
+    background-color: rgb(89, 0, 168);
+}
+
+.secondaryBtn {
+    background-color: white;
+    box-shadow: var(--shadow);
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    color: black;
+    border-radius: 5rem;
+    border: 1px solid RGB(126, 34, 206);
+}
+
+.secondaryBtn:hover {
+    background-color: RGB(126, 34, 206);
+    box-shadow: var(--shadow);
+    color: white;
+    border: 1px solid RGB(126, 34, 206);
+}
+
+.secondaryBtn:hover a {
+    color: white;
+}
+
+
+.box {
+    display: flex;
+    box-shadow: var(--shadow);
+    border-radius: .8rem;
 }
 
 /* --------------------------------------------
@@ -76,7 +137,7 @@ NAV NAV NAV NAV NAV----------------------------------------------- */
 }
 
 .nav-links li a:hover {
-    color: rgb(181, 181, 181);
+    color: var(--accent);
 }
 
 .nav-links li:nth-of-type(6) {
@@ -115,56 +176,28 @@ p {
 }
 
 .firstBtn {
-    margin-top: 1.5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.firstBtn a {
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
 .introBox {
-    margin-top: 10rem;
-    padding-left: 5rem;
+    height: 100%;
     justify-content: center;
+    padding: 5rem;
 }
 
-.imageBox {
+.container2,
+.introBox p {
+    margin-bottom: 1rem;
+}
+
+.firstBox4 img {
     position: relative;
-    bottom: -5px;
+    bottom: 0;
     right: 0;
 }
 
-.btnPrimary {
-    background-color: RGB(126, 34, 206);
-    box-shadow: var(--shadow);
-    padding: 0.5rem 2rem;
-    text-decoration: none;
-    color: white;
-    border-radius: 5rem;
-    border: 1px solid RGB(126, 34, 206);
-}
-
-
-.secondaryBtn {
-    background-color: white;
-    box-shadow: var(--shadow);
-    padding: 0.5rem 2rem;
-    text-decoration: none;
-    color: black;
-    border-radius: 5rem;
-    border: 1px solid RGB(126, 34, 206);
-}
-
-.secondaryBtn:hover {
-    background-color: RGB(126, 34, 206);
-    box-shadow: var(--shadow);
-    color: white;
-    border: 1px solid RGB(126, 34, 206);
-}
 
 
 
@@ -173,17 +206,22 @@ p {
 .secondBox {
     padding: 3%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+
+}
+
+.resumeContainer {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-radius: 15px;
+    width: 80%;
 }
 
-.resume-img {
-    margin-top: 5%;
-}
-
-.resume-img img {
+img {
     width: 300px;
     box-shadow: var(--shadow);
     border-radius: 15px;
@@ -204,16 +242,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.detail h1 {
-    padding: 0 3rem;
-    font-weight: 700;
-    font-size: 3rem;
-    color: RGB(126, 34, 206);
-    margin-bottom: 1rem;
-    padding-bottom: 0rem;
-    border-bottom: 5px solid RGB(126, 34, 206);
+    width: 35%;
 }
 
 
@@ -241,12 +270,6 @@ p {
 
 /* -----------Skill Skill Skill------------- */
 
-.skillHeading h1 {
-    color: RGB(126, 34, 206);
-    border-bottom: 5px solid RGB(126, 34, 206);
-    padding: 0 3rem;
-    margin-bottom: 1rem;
-}
 
 .skillContainer {
     display: flex;
@@ -264,27 +287,22 @@ p {
 }
 
 .skill {
+    justify-content: center;
     width: 20%;
-    height: 10.5rem;
-    display: flex;
-    flex-direction: column;
+    height: 12.5rem;
     font-size: 12px;
     text-align: left;
-    justify-content: center;
-    padding: 0.5rem 2.5rem;
-    box-shadow: var(--shadow);
     margin: .5rem;
-    border-radius: .8rem;
-
+    flex-direction: column;
+    padding: 0.5rem 2.5rem;
+    overflow: auto;
 }
 
 .skill:hover {
-    background-color: rgb(237, 237, 237);
-    color: black;
+    background-color: var(--hoverbg);
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
-
-
 
 .skill img {
     width: 15%;
@@ -293,10 +311,80 @@ p {
 
 .skill h3 {
     /* color: RGB(126, 34, 206); */
-    color: black;
+    color: var(--accent);
     margin-bottom: .7rem;
     font-weight: 500;
 }
+
+.skill p {
+    color: grey;
+}
+
+.skillPercentage {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 1rem 0;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(218, 175, 255);
+    border-radius: 15px;
+}
+
+
+.skillPercentageDiv {
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+#jsSkill {
+    height: 100%;
+    width: 80%;
+    border-radius: 15px;
+    background-color: var(--accent);
+}
+
+#reactjsSkill {
+    height: 100%;
+    width: 80%;
+    border-radius: 15px;
+    background-color: var(--accent);
+
+}
+
+#nodeSkill {
+    height: 100%;
+    width: 60%;
+    border-radius: 15px;
+    background-color: var(--accent);
+
+}
+
+#htmlSkill {
+    height: 100%;
+    width: 95%;
+    border-radius: 15px;
+    background-color: var(--accent);
+}
+
+#cssSkill {
+    height: 100%;
+    width: 85%;
+    border-radius: 15px;
+    background-color: var(--accent);
+}
+
+
+#mongodbSkill {
+    height: 100%;
+    width: 70%;
+    border-radius: 15px;
+    background-color: var(--accent);
+}
+
 
 
 /* -----------Projects Section ---------------- */
@@ -307,16 +395,6 @@ p {
     width: 100%;
     justify-content: center;
     align-items: center;
-}
-
-.projects h1 {
-    padding: 0 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 10px solid RGB(126, 34, 206);
-    /* width: 30%; */
 }
 
 .projectInfo {
@@ -349,6 +427,7 @@ p {
 .projectInfo p {
     font-weight: 300;
     font-size: 0.8rem;
+    color: grey;
 }
 
 .myProjects {
@@ -372,6 +451,77 @@ p {
     padding-top: 15px;
     justify-content: center;
     align-items: center;
+}
+
+.techUsed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.techContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+
+}
+
+.techUsed .techContainer img {
+    width: 50px;
+    margin: 1.5rem 1.5rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin: 0 4rem;
+}
+
+
+.contactContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactBox {
+    /* height: 20%; */
+    width: 20%;
+    padding: 2rem;
+    margin: 2rem 1rem;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.contactBox i {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.contactBox h4 {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: grey;
+    text-decoration: none;
+}
+
+.contactBox:hover {
+    box-shadow: var(--hoverShadow);
+
+    background: var(--hoverbg);
+}
+
+.contactBox p {
+    font-size: 0.8rem;
+    overflow-x: auto;
 }
 
 .footer {
@@ -409,7 +559,7 @@ p {
 
     .nav-links {
         position: relative;
-        background: RGB(126, 34, 206);
+        background: var(--accent);
         height: 70vh;
         width: 100%;
         align-items: center;
@@ -418,6 +568,10 @@ p {
         clip-path: circle(100px at 90% -30%);
         -webkit-clip-path: circle(100px at 90% -30%);
         transition: all 1s ease-out;
+    }
+
+    .nav-links li a:hover {
+        color: rgb(196, 128, 255);
     }
 
 
@@ -444,11 +598,11 @@ p {
     }
 
 
-    .firstBox {
+    /* .firstBox {
         flex-direction: column-reverse;
-    }
+    } */
 
-    .firstBox .imageBox {
+    .firstBox img {
         display: none;
     }
 
@@ -458,6 +612,23 @@ p {
         padding-right: 2rem;
     }
 
+    .container2 p:nth-of-type(2) {
+        color: grey;
+        font-size: 0.8rem;
+    }
+
+    .container2 span {
+        font-size: 0.7rem;
+    }
+
+
+    .btnPrimary {
+        margin: 1rem 0.2rem;
+    }
+
+    .secondaryBtn {
+        margin: 1rem 0.2rem;
+    }
 
 
     .secondBox {
@@ -467,18 +638,18 @@ p {
         width: 100%;
     }
 
+    .resumeContainer {
+        flex-direction: column;
+    }
 
-    .resume-img {
+    .resumeContainer img {
         margin-top: 5%;
         width: 70%;
     }
 
-    .educationDetail {
-        width: 100%;
-    }
-
     .detail {
         width: 100%;
+        margin-top: 1.5rem;
     }
 
     .resume-img {
@@ -522,7 +693,27 @@ p {
         width: 85%;
     }
 
+    .techUsed h1 {
+        font-size: 1.5rem;
+    }
 
+    .contactContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .contactBox {
+        width: 40%;
+    }
+
+}
+
+
+@media screen and (max-width:550px) {
+    .contactBox {
+        width: 90%;
+    }
 
 }
 
